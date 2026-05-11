@@ -1,0 +1,73 @@
+aid: google-chat-integrations-for-workspace
+name: Google Chat Integrations for Workspace
+description: >-
+  Google Chat is the messaging and collaboration platform built into Google
+  Workspace, allowing teams to chat in direct messages, group conversations,
+  and spaces with threaded discussions, file sharing, tasks, and Chat app
+  integrations. The Google Chat REST API lets developers build Chat apps that
+  send messages, manage spaces and members, post cards, handle slash commands,
+  react to events, and integrate external services into Workspace
+  conversations. Authentication uses OAuth 2.0 (user credentials for
+  user-impersonating calls) or service-account credentials for app-bot calls.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Google Workspace
+  - Team Chat
+  - Messaging
+  - Collaboration
+  - Chat Apps
+  - Spaces
+  - Slash Commands
+  - Bots
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/google-chat-integrations-for-workspace/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: google-chat-integrations-for-workspace:chat-api
+    name: Google Chat API
+    description: >-
+      REST API for sending and managing messages, spaces, members, reactions,
+      attachments, custom emoji, user notification settings, and read states
+      in Google Chat. Authentication uses OAuth 2.0 user credentials or
+      service-account credentials (for app-bot calls).
+    humanURL: https://developers.google.com/workspace/chat
+    baseURL: https://chat.googleapis.com
+    tags:
+      - Google Chat
+      - Messages
+      - Spaces
+      - Members
+      - Reactions
+      - Chat Apps
+    properties:
+      - type: Documentation
+        url: https://developers.google.com/workspace/chat
+      - type: API Reference
+        url: https://developers.google.com/workspace/chat/api/reference/rest
+      - type: Discovery Document
+        url: https://chat.googleapis.com/$discovery/rest?version=v1
+      - type: Authentication
+        url: https://developers.google.com/workspace/chat/authenticate-authorize
+      - type: Build Chat Apps
+        url: https://developers.google.com/workspace/chat/build
+common:
+  - type: Website
+    url: https://workspace.google.com/products/chat/
+  - type: Documentation
+    url: https://developers.google.com/workspace/chat
+  - type: Developer Portal
+    url: https://developers.google.com/workspace
+  - type: Cloud Console
+    url: https://console.cloud.google.com
+  - type: Pricing
+    url: https://workspace.google.com/pricing.html
+  - type: Sign Up
+    url: https://workspace.google.com/signup
+  - type: Support
+    url: https://support.google.com/chat
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
