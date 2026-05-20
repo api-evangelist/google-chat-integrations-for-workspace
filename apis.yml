@@ -54,6 +54,8 @@ apis:
       - type: Build Chat Apps
         url: https://developers.google.com/workspace/chat/build
 common:
+  - type: GitHubOrganization
+    url: https://github.com/googleworkspace
   - type: Website
     url: https://workspace.google.com/products/chat/
   - type: Documentation
