@@ -1,0 +1,358 @@
+openapi: 3.1.0
+info:
+  title: Google Chat API
+  description: |
+    The Google Chat REST API lets developers build Chat apps that send messages,
+    manage spaces and members, post cards, handle slash commands, react to
+    events, and integrate external services into Workspace conversations.
+    Authentication uses OAuth 2.0 user credentials or service-account credentials
+    for app-bot calls.
+  version: v1
+servers:
+  - url: https://chat.googleapis.com
+security:
+  - OAuth2: [chat.spaces, chat.messages]
+paths:
+  /v1/spaces:
+    post:
+      summary: Create space
+      operationId: createSpace
+      parameters:
+        - name: requestId
+          in: query
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Space'
+      responses:
+        '200':
+          description: Created space
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Space'
+    get:
+      summary: List spaces
+      operationId: listSpaces
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+        - name: filter
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of spaces
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spaces:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Space'
+                  nextPageToken:
+                    type: string
+  /v1/{name}:
+    get:
+      summary: Get space
+      operationId: getSpace
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          example: spaces/AAAA-BBBB
+      responses:
+        '200':
+          description: Space details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Space'
+  /v1/{parent}/messages:
+    post:
+      summary: Create message
+      operationId: createMessage
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+          example: spaces/AAAA-BBBB
+        - name: threadKey
+          in: query
+          schema:
+            type: string
+        - name: requestId
+          in: query
+          schema:
+            type: string
+        - name: messageReplyOption
+          in: query
+          schema:
+            type: string
+        - name: messageId
+          in: query
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+      responses:
+        '200':
+          description: Created message
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+    get:
+      summary: List messages
+      operationId: listMessages
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+        - name: filter
+          in: query
+          schema:
+            type: string
+        - name: orderBy
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Message list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Message'
+                  nextPageToken:
+                    type: string
+  /v1/{name}/message:
+    delete:
+      summary: Delete message
+      operationId: deleteMessage
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          example: spaces/AAAA-BBBB/messages/12345
+      responses:
+        '200':
+          description: Deleted
+  /v1/{parent}/members:
+    post:
+      summary: Create membership
+      operationId: createMembership
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Membership'
+      responses:
+        '200':
+          description: Membership created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Membership'
+    get:
+      summary: List memberships
+      operationId: listMemberships
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Membership list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  memberships:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Membership'
+                  nextPageToken:
+                    type: string
+  /v1/{parent}/reactions:
+    post:
+      summary: Create reaction
+      operationId: createReaction
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+          example: spaces/AAAA/messages/12345
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                emoji:
+                  type: object
+                  properties:
+                    unicode:
+                      type: string
+      responses:
+        '200':
+          description: Reaction
+          content:
+            application/json:
+              schema:
+                type: object
+  /v1/customEmojis:
+    get:
+      summary: List custom emojis
+      operationId: listCustomEmojis
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Custom emoji list
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            chat.spaces: Manage Chat spaces
+            chat.messages: Manage Chat messages
+            chat.memberships: Manage Chat memberships
+  schemas:
+    Space:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        spaceType:
+          type: string
+        singleUserBotDm:
+          type: boolean
+        threaded:
+          type: boolean
+        displayName:
+          type: string
+        spaceDetails:
+          type: object
+          properties:
+            description:
+              type: string
+            guidelines:
+              type: string
+    Message:
+      type: object
+      properties:
+        name:
+          type: string
+        sender:
+          type: object
+        createTime:
+          type: string
+          format: date-time
+        text:
+          type: string
+        thread:
+          type: object
+          properties:
+            name:
+              type: string
+        space:
+          type: object
+        cards:
+          type: array
+          items:
+            type: object
+        cardsV2:
+          type: array
+          items:
+            type: object
+    Membership:
+      type: object
+      properties:
+        name:
+          type: string
+        state:
+          type: string
+        role:
+          type: string
+        member:
+          type: object
+        createTime:
+          type: string
+          format: date-time
