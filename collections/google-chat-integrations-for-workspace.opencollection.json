@@ -1,0 +1,283 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Chat API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List spaces",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://chat.googleapis.com/v1/spaces",
+        "params": [
+          {
+            "name": "pageSize",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageToken",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "filter",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List spaces"
+    },
+    {
+      "info": {
+        "name": "Create space",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://chat.googleapis.com/v1/spaces",
+        "params": [
+          {
+            "name": "requestId",
+            "value": "",
+            "type": "query"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create space"
+    },
+    {
+      "info": {
+        "name": "Get space",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://chat.googleapis.com/v1/:name",
+        "params": [
+          {
+            "name": "name",
+            "value": "spaces/AAAA-BBBB",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get space"
+    },
+    {
+      "info": {
+        "name": "List messages",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://chat.googleapis.com/v1/:parent/messages",
+        "params": [
+          {
+            "name": "parent",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "pageSize",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageToken",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "filter",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "orderBy",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List messages"
+    },
+    {
+      "info": {
+        "name": "Create message",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://chat.googleapis.com/v1/:parent/messages",
+        "params": [
+          {
+            "name": "parent",
+            "value": "spaces/AAAA-BBBB",
+            "type": "path"
+          },
+          {
+            "name": "threadKey",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "requestId",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "messageReplyOption",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "messageId",
+            "value": "",
+            "type": "query"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create message"
+    },
+    {
+      "info": {
+        "name": "Delete message",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://chat.googleapis.com/v1/:name/message",
+        "params": [
+          {
+            "name": "name",
+            "value": "spaces/AAAA-BBBB/messages/12345",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete message"
+    },
+    {
+      "info": {
+        "name": "List memberships",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://chat.googleapis.com/v1/:parent/members",
+        "params": [
+          {
+            "name": "parent",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "pageSize",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageToken",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List memberships"
+    },
+    {
+      "info": {
+        "name": "Create membership",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://chat.googleapis.com/v1/:parent/members",
+        "params": [
+          {
+            "name": "parent",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create membership"
+    },
+    {
+      "info": {
+        "name": "Create reaction",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://chat.googleapis.com/v1/:parent/reactions",
+        "params": [
+          {
+            "name": "parent",
+            "value": "spaces/AAAA/messages/12345",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create reaction"
+    },
+    {
+      "info": {
+        "name": "List custom emojis",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://chat.googleapis.com/v1/customEmojis",
+        "params": [
+          {
+            "name": "pageSize",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageToken",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List custom emojis"
+    }
+  ],
+  "bundled": true
+}

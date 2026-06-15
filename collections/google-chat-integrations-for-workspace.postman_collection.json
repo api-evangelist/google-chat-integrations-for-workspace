@@ -1,0 +1,1166 @@
+{
+  "item": [
+    {
+      "id": "5ad27e1f-4599-4f25-b674-a28062cc67b0",
+      "name": "Create space",
+      "request": {
+        "name": "Create space",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            "spaces"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "requestId",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"spaceType\": \"<string>\",\n  \"singleUserBotDm\": \"<boolean>\",\n  \"threaded\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"spaceDetails\": {\n    \"description\": \"<string>\",\n    \"guidelines\": \"<string>\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "33fe2de4-28f7-4f8b-958f-35ada1801193",
+          "name": "Created space",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                "spaces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "requestId",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"spaceType\": \"<string>\",\n  \"singleUserBotDm\": \"<boolean>\",\n  \"threaded\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"spaceDetails\": {\n    \"description\": \"<string>\",\n    \"guidelines\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"spaceType\": \"string\",\n  \"singleUserBotDm\": false,\n  \"threaded\": true,\n  \"displayName\": \"string\",\n  \"spaceDetails\": {\n    \"description\": \"string\",\n    \"guidelines\": \"string\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2f191baa-ce9d-4247-8f67-18def31468a4",
+      "name": "List spaces",
+      "request": {
+        "name": "List spaces",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            "spaces"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "pageSize",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageToken",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "filter",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a7762401-6a59-4ba4-a682-3834f2b8e760",
+          "name": "List of spaces",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                "spaces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageToken",
+                  "value": "<string>"
+                },
+                {
+                  "key": "filter",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"spaces\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"spaceType\": \"string\",\n      \"singleUserBotDm\": true,\n      \"threaded\": false,\n      \"displayName\": \"string\",\n      \"spaceDetails\": {\n        \"description\": \"string\",\n        \"guidelines\": \"string\"\n      }\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"spaceType\": \"string\",\n      \"singleUserBotDm\": false,\n      \"threaded\": false,\n      \"displayName\": \"string\",\n      \"spaceDetails\": {\n        \"description\": \"string\",\n        \"guidelines\": \"string\"\n      }\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "87765903-50de-4248-91a5-a0328e42b124",
+      "name": "Get space",
+      "request": {
+        "name": "Get space",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            ":name"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "name",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "025ebe59-426a-405b-9b0c-2382bd584a5d",
+          "name": "Space details",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"spaceType\": \"string\",\n  \"singleUserBotDm\": false,\n  \"threaded\": true,\n  \"displayName\": \"string\",\n  \"spaceDetails\": {\n    \"description\": \"string\",\n    \"guidelines\": \"string\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "46d25337-1c1e-4b19-bc8c-421cac2255f4",
+      "name": "Create message",
+      "request": {
+        "name": "Create message",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            ":parent",
+            "messages"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "threadKey",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "requestId",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "messageReplyOption",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "messageId",
+              "value": "<string>"
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "parent",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"<string>\",\n  \"sender\": \"<object>\",\n  \"createTime\": \"<dateTime>\",\n  \"text\": \"<string>\",\n  \"thread\": {\n    \"name\": \"<string>\"\n  },\n  \"space\": \"<object>\",\n  \"cards\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"cardsV2\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "03d6e05e-9dbf-4802-b6a0-782e3b84b6bf",
+          "name": "Created message",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                ":parent",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "threadKey",
+                  "value": "<string>"
+                },
+                {
+                  "key": "requestId",
+                  "value": "<string>"
+                },
+                {
+                  "key": "messageReplyOption",
+                  "value": "<string>"
+                },
+                {
+                  "key": "messageId",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"sender\": \"<object>\",\n  \"createTime\": \"<dateTime>\",\n  \"text\": \"<string>\",\n  \"thread\": {\n    \"name\": \"<string>\"\n  },\n  \"space\": \"<object>\",\n  \"cards\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"cardsV2\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"name\": \"string\",\n  \"sender\": {},\n  \"createTime\": \"2015-10-21T15:35:20.259Z\",\n  \"text\": \"string\",\n  \"thread\": {\n    \"name\": \"string\"\n  },\n  \"space\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "4348d502-482a-4794-8f75-f8e9f16ba1a2",
+      "name": "List messages",
+      "request": {
+        "name": "List messages",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            ":parent",
+            "messages"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "pageSize",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageToken",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "filter",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "orderBy",
+              "value": "<string>"
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "parent",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2e14a72f-4b24-4afe-8d85-b2509bf276bd",
+          "name": "Message list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                ":parent",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageToken",
+                  "value": "<string>"
+                },
+                {
+                  "key": "filter",
+                  "value": "<string>"
+                },
+                {
+                  "key": "orderBy",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"messages\": [\n    {\n      \"name\": \"string\",\n      \"sender\": {},\n      \"createTime\": \"2026-05-07T12:33:12.810Z\",\n      \"text\": \"string\",\n      \"thread\": {\n        \"name\": \"string\"\n      },\n      \"space\": {}\n    },\n    {\n      \"name\": \"string\",\n      \"sender\": {},\n      \"createTime\": \"2021-02-28T16:30:01.124Z\",\n      \"text\": \"string\",\n      \"thread\": {\n        \"name\": \"string\"\n      },\n      \"space\": {}\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "75f76c64-d1ab-4aa0-af1e-8fe0e7b7c1d9",
+      "name": "Delete message",
+      "request": {
+        "name": "Delete message",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            ":name",
+            "message"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "name",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "db245616-a979-4d1b-9b41-7d01b0ee4e49",
+          "name": "Deleted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                ":name",
+                "message"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "0d0878f7-7f27-40a4-94c6-374dbbc1b531",
+      "name": "Create membership",
+      "request": {
+        "name": "Create membership",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            ":parent",
+            "members"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "parent",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"<string>\",\n  \"state\": \"<string>\",\n  \"role\": \"<string>\",\n  \"member\": \"<object>\",\n  \"createTime\": \"<dateTime>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "6eacf949-6db6-4ff7-be32-979d269364d6",
+          "name": "Membership created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                ":parent",
+                "members"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"state\": \"<string>\",\n  \"role\": \"<string>\",\n  \"member\": \"<object>\",\n  \"createTime\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"name\": \"string\",\n  \"state\": \"string\",\n  \"role\": \"string\",\n  \"member\": {},\n  \"createTime\": \"2014-10-03T14:28:43.800Z\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2b3187ef-06aa-4caf-bad0-b5a6ccb0c720",
+      "name": "List memberships",
+      "request": {
+        "name": "List memberships",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            ":parent",
+            "members"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "pageSize",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageToken",
+              "value": "<string>"
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "parent",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "87171e8b-c3e7-4bb3-b939-9d6927917437",
+          "name": "Membership list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                ":parent",
+                "members"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"memberships\": [\n    {\n      \"name\": \"string\",\n      \"state\": \"string\",\n      \"role\": \"string\",\n      \"member\": {},\n      \"createTime\": \"2021-07-31T21:53:41.483Z\"\n    },\n    {\n      \"name\": \"string\",\n      \"state\": \"string\",\n      \"role\": \"string\",\n      \"member\": {},\n      \"createTime\": \"2025-03-26T01:01:21.524Z\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "26ddf695-0cab-4df5-98d5-dc1e082fbdf4",
+      "name": "Create reaction",
+      "request": {
+        "name": "Create reaction",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            ":parent",
+            "reactions"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "parent",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"emoji\": {\n    \"unicode\": \"<string>\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "0b14fd27-68bd-48ee-8315-b7f3ba40ae73",
+          "name": "Reaction",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                ":parent",
+                "reactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"emoji\": {\n    \"unicode\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "81810ccb-2d91-44f6-99d1-bfa34bb3cdf8",
+      "name": "List custom emojis",
+      "request": {
+        "name": "List custom emojis",
+        "description": {},
+        "url": {
+          "path": [
+            "v1",
+            "customEmojis"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "pageSize",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageToken",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "9121f10a-2235-4764-a63e-4e92b1cd8d3f",
+          "name": "Custom emoji list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                "customEmojis"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://chat.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "chat.spaces chat.messages chat.memberships"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ac139539-d516-4683-9f17-d00bbf892d0f",
+    "name": "Google Chat API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Chat REST API lets developers build Chat apps that send messages,\nmanage spaces and members, post cards, handle slash commands, react to\nevents, and integrate external services into Workspace conversations.\nAuthentication uses OAuth 2.0 user credentials or service-account credentials\nfor app-bot calls.\n",
+      "type": "text/plain"
+    }
+  }
+}
