@@ -60,13 +60,13 @@ common:
     url: https://workspace.google.com/products/chat/
   - type: Documentation
     url: https://developers.google.com/workspace/chat
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://developers.google.com/workspace
   - type: Cloud Console
     url: https://console.cloud.google.com
   - type: Pricing
     url: https://workspace.google.com/pricing.html
-  - type: SignUp
+  - type: Signup
     url: https://workspace.google.com/signup
   - type: Support
     url: https://support.google.com/chat
