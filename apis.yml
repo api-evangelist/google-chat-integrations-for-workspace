@@ -54,6 +54,12 @@ apis:
       - type: Build Chat Apps
         url: https://developers.google.com/workspace/chat/build
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-chat-integrations-for-workspace-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-chat-integrations-for-workspace-domain-security.yml
+  - type: Authentication
+    url: authentication/google-chat-integrations-for-workspace-authentication.yml
   - type: OAuthScopes
     url: scopes/google-chat-integrations-for-workspace-scopes.yml
   - type: GitHubOrganization
