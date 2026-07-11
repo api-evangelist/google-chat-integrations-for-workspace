@@ -1,0 +1,29 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/google-chat-integrations-for-workspace-openapi.yml
+schemes:
+- name: OAuth2
+  source: openapi/google-chat-integrations-for-workspace-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+    tokenUrl: https://oauth2.googleapis.com/token
+scopes:
+- scope: chat.memberships
+  description: Manage Chat memberships
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-chat-integrations-for-workspace-openapi.yml
+- scope: chat.messages
+  description: Manage Chat messages
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-chat-integrations-for-workspace-openapi.yml
+- scope: chat.spaces
+  description: Manage Chat spaces
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-chat-integrations-for-workspace-openapi.yml

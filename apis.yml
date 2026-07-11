@@ -54,6 +54,8 @@ apis:
       - type: Build Chat Apps
         url: https://developers.google.com/workspace/chat/build
 common:
+  - type: OAuthScopes
+    url: scopes/google-chat-integrations-for-workspace-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/googleworkspace
   - type: Website
@@ -70,6 +72,8 @@ common:
     url: https://workspace.google.com/signup
   - type: Support
     url: https://support.google.com/chat
+  - url: https://developers.google.com/feeds/chat-release-notes.xml
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
