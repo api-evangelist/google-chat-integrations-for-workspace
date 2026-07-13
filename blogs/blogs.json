@@ -1,0 +1,14 @@
+{
+  "repo": "google-chat-integrations-for-workspace",
+  "feeds": [
+    {
+      "source": "https://developers.google.com/feeds/chat-release-notes.xml",
+      "feed_url": "https://developers.google.com/feeds/chat-release-notes.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 30
+}
