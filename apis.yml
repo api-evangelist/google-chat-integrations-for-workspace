@@ -54,6 +54,8 @@ apis:
       - type: Build Chat Apps
         url: https://developers.google.com/workspace/chat/build
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-chat-integrations-for-workspace-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-chat-integrations-for-workspace-vulnerability-disclosure.yml
   - type: DomainSecurity
