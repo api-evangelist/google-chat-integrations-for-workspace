@@ -1,0 +1,147 @@
+openapi: 3.1.0
+info:
+  title: Google Chat CustomEmojis Messages API
+  description: 'The Google Chat REST API lets developers build Chat apps that send messages,
+
+    manage spaces and members, post cards, handle slash commands, react to
+
+    events, and integrate external services into Workspace conversations.
+
+    Authentication uses OAuth 2.0 user credentials or service-account credentials
+
+    for app-bot calls.
+
+    '
+  version: v1
+servers:
+- url: https://chat.googleapis.com
+security:
+- OAuth2:
+  - chat.spaces
+  - chat.messages
+tags:
+- name: Messages
+paths:
+  /v1/{parent}/messages:
+    post:
+      summary: Create message
+      operationId: createMessage
+      parameters:
+      - name: parent
+        in: path
+        required: true
+        schema:
+          type: string
+        example: spaces/AAAA-BBBB
+      - name: threadKey
+        in: query
+        schema:
+          type: string
+      - name: requestId
+        in: query
+        schema:
+          type: string
+      - name: messageReplyOption
+        in: query
+        schema:
+          type: string
+      - name: messageId
+        in: query
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+      responses:
+        '200':
+          description: Created message
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+      tags:
+      - Messages
+    get:
+      summary: List messages
+      operationId: listMessages
+      parameters:
+      - name: parent
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
+      - name: filter
+        in: query
+        schema:
+          type: string
+      - name: orderBy
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Message list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Message'
+                  nextPageToken:
+                    type: string
+      tags:
+      - Messages
+components:
+  schemas:
+    Message:
+      type: object
+      properties:
+        name:
+          type: string
+        sender:
+          type: object
+        createTime:
+          type: string
+          format: date-time
+        text:
+          type: string
+        thread:
+          type: object
+          properties:
+            name:
+              type: string
+        space:
+          type: object
+        cards:
+          type: array
+          items:
+            type: object
+        cardsV2:
+          type: array
+          items:
+            type: object
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            chat.spaces: Manage Chat spaces
+            chat.messages: Manage Chat messages
+            chat.memberships: Manage Chat memberships

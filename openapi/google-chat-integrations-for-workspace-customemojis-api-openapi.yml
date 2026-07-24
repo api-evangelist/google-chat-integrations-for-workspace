@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: Google Chat CustomEmojis API
+  description: 'The Google Chat REST API lets developers build Chat apps that send messages,
+
+    manage spaces and members, post cards, handle slash commands, react to
+
+    events, and integrate external services into Workspace conversations.
+
+    Authentication uses OAuth 2.0 user credentials or service-account credentials
+
+    for app-bot calls.
+
+    '
+  version: v1
+servers:
+- url: https://chat.googleapis.com
+security:
+- OAuth2:
+  - chat.spaces
+  - chat.messages
+tags:
+- name: CustomEmojis
+paths:
+  /v1/customEmojis:
+    get:
+      summary: List custom emojis
+      operationId: listCustomEmojis
+      parameters:
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Custom emoji list
+          content:
+            application/json:
+              schema:
+                type: object
+      tags:
+      - CustomEmojis
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            chat.spaces: Manage Chat spaces
+            chat.messages: Manage Chat messages
+            chat.memberships: Manage Chat memberships
