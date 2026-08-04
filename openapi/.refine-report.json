@@ -1,0 +1,26 @@
+{
+  "provider": "google-chat-integrations-for-workspace",
+  "sources": [
+    "google-chat-integrations-for-workspace-customemojis-api-openapi.yml",
+    "google-chat-integrations-for-workspace-google-chat-api-api-openapi.yml",
+    "google-chat-integrations-for-workspace-members-api-openapi.yml",
+    "google-chat-integrations-for-workspace-message-api-openapi.yml",
+    "google-chat-integrations-for-workspace-messages-api-openapi.yml",
+    "google-chat-integrations-for-workspace-reactions-api-openapi.yml",
+    "google-chat-integrations-for-workspace-spaces-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-chat-integrations-for-workspace-customemojis-api-openapi.yml",
+    "google-chat-integrations-for-workspace-google-chat-api-api-openapi.yml",
+    "google-chat-integrations-for-workspace-members-api-openapi.yml",
+    "google-chat-integrations-for-workspace-message-api-openapi.yml",
+    "google-chat-integrations-for-workspace-messages-api-openapi.yml",
+    "google-chat-integrations-for-workspace-reactions-api-openapi.yml",
+    "google-chat-integrations-for-workspace-spaces-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
