@@ -5,10 +5,10 @@
       "source": "https://developers.google.com/feeds/chat-release-notes.xml",
       "feed_url": "https://developers.google.com/feeds/chat-release-notes.xml",
       "title": "",
-      "saved": 0,
+      "saved": 1,
       "method": "feed"
     }
   ],
-  "fetched": "2026-08-06T14:08:46Z",
-  "post_count": 34
+  "fetched": "2026-08-15T12:11:08Z",
+  "post_count": 35
 }
