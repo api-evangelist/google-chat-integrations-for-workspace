@@ -36,7 +36,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/google-chat-integrations-for-workspace/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: google-chat-integrations-for-workspace:chat-api
   name: Google Chat API
