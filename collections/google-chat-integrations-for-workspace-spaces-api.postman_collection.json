@@ -1,0 +1,268 @@
+{
+  "item": [
+    {
+      "id": "544cda70-9991-4172-b523-048ee3c79230",
+      "name": "Spaces",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e0e61d72-278d-4434-98aa-ed696d092e38",
+          "name": "Create space",
+          "request": {
+            "name": "Create space",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "spaces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "requestId",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"spaceType\": \"<string>\",\n  \"singleUserBotDm\": \"<boolean>\",\n  \"threaded\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"spaceDetails\": {\n    \"description\": \"<string>\",\n    \"guidelines\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4d195bf2-8bc8-403b-ac95-91fc7ab5e086",
+              "name": "Created space",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "spaces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "requestId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"spaceType\": \"<string>\",\n  \"singleUserBotDm\": \"<boolean>\",\n  \"threaded\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"spaceDetails\": {\n    \"description\": \"<string>\",\n    \"guidelines\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"spaceType\": \"string\",\n  \"singleUserBotDm\": false,\n  \"threaded\": false,\n  \"displayName\": \"string\",\n  \"spaceDetails\": {\n    \"description\": \"string\",\n    \"guidelines\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "edb950ea-de69-420e-bc1f-79ccd283ff5b",
+          "name": "List spaces",
+          "request": {
+            "name": "List spaces",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "spaces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9af37b9c-9e89-4334-bbba-4e73b4db73c8",
+              "name": "List of spaces",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "spaces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"spaces\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"spaceType\": \"string\",\n      \"singleUserBotDm\": true,\n      \"threaded\": false,\n      \"displayName\": \"string\",\n      \"spaceDetails\": {\n        \"description\": \"string\",\n        \"guidelines\": \"string\"\n      }\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"spaceType\": \"string\",\n      \"singleUserBotDm\": false,\n      \"threaded\": true,\n      \"displayName\": \"string\",\n      \"spaceDetails\": {\n        \"description\": \"string\",\n        \"guidelines\": \"string\"\n      }\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://chat.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "chat.spaces chat.messages chat.memberships"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "03b7cf64-5e3a-4a9c-9598-7c83ad3632be",
+    "name": "Google Chat CustomEmojis Spaces API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Chat REST API lets developers build Chat apps that send messages,\nmanage spaces and members, post cards, handle slash commands, react to\nevents, and integrate external services into Workspace conversations.\nAuthentication uses OAuth 2.0 user credentials or service-account credentials\nfor app-bot calls.\n",
+      "type": "text/plain"
+    }
+  }
+}
