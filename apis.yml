@@ -48,6 +48,13 @@ apis:
   baseURL: https://chat.googleapis.com
   tags:
   - Google Chat
+  - Message
+  - Spaces
+  - Members
+  - Reactions
+  - Chat Apps
+  tags_raw:
+  - Google Chat
   - Messages
   - Spaces
   - Members
@@ -121,6 +128,8 @@ apis:
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
