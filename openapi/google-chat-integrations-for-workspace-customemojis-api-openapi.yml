@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Google Chat CustomEmojis API
+  title: Google Chat Custom Emojis API
   description: 'The Google Chat REST API lets developers build Chat apps that send messages,
 
     manage spaces and members, post cards, handle slash commands, react to
