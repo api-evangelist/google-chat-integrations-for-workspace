@@ -1,13 +1,10 @@
 aid: google-chat-integrations-for-workspace
 name: Google Chat Integrations for Workspace
-description: >-
-  Google Chat is the messaging and collaboration platform built into Google
-  Workspace, allowing teams to chat in direct messages, group conversations,
-  and spaces with threaded discussions, file sharing, tasks, and Chat app
-  integrations. The Google Chat REST API lets developers build Chat apps that
-  send messages, manage spaces and members, post cards, handle slash commands,
-  react to events, and integrate external services into Workspace
-  conversations. Authentication uses OAuth 2.0 (user credentials for
+description: Google Chat is the messaging and collaboration platform built into Google Workspace, allowing
+  teams to chat in direct messages, group conversations, and spaces with threaded discussions, file sharing,
+  tasks, and Chat app integrations. The Google Chat REST API lets developers build Chat apps that send
+  messages, manage spaces and members, post cards, handle slash commands, react to events, and integrate
+  external services into Workspace conversations. Authentication uses OAuth 2.0 (user credentials for
   user-impersonating calls) or service-account credentials for app-bot calls.
 type: Index
 deliveryModel:
@@ -36,26 +33,24 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-chat-integrations-for-workspace.png
 tags:
-  - Google Workspace
-  - Team Chat
-  - Messaging
-  - Collaboration
-  - Chat Apps
-  - Spaces
-  - Slash Commands
-  - Bots
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/google-chat-integrations-for-workspace/refs/heads/main/apis.yml
+- Google Workspace
+- Team Chat
+- Messaging
+- Collaboration
+- Chat Apps
+- Spaces
+- Slash Commands
+- Bots
+url: https://raw.githubusercontent.com/api-evangelist/google-chat-integrations-for-workspace/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: google-chat-integrations-for-workspace:chat-api
   name: Google Chat API
-  description: >-
-    REST API for sending and managing messages, spaces, members, reactions, attachments, custom emoji,
-    user notification settings, and read states in Google Chat. Authentication uses OAuth 2.0 user credentials
-    or service-account credentials (for app-bot calls).
+  description: REST API for sending and managing messages, spaces, members, reactions, attachments, custom
+    emoji, user notification settings, and read states in Google Chat. Authentication uses OAuth 2.0 user
+    credentials or service-account credentials (for app-bot calls).
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
@@ -83,11 +78,9 @@ apis:
     url: https://developers.google.com/workspace/chat/authenticate-authorize
   - type: Build Chat Apps
     url: https://developers.google.com/workspace/chat/build
-- aid: >-
-    google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-customemojis-api
+- aid: google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-customemojis-api
   name: Google Chat Integrations for Workspace CustomEmojis API
-  description: >-
-    The CustomEmojis API from Google Chat Integrations for Workspace — 1 operation(s) for customemojis.
+  description: The CustomEmojis API from Google Chat Integrations for Workspace — 1 operation(s) for customemojis.
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
@@ -95,12 +88,10 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-chat-integrations-for-workspace-customemojis-api-openapi.yml
-- aid: >-
-    google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-google-chat-api-api
-  name: Google Chat Integrations for Workspace Google Chat API API
-  description: >-
-    The Google Chat API API from Google Chat Integrations for Workspace — 1 operation(s) for google chat
-    api.
+- aid: google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-google-chat-api-api
+  name: Google Chat Integrations for Workspace Google Chat API
+  description: The Google Chat API API from Google Chat Integrations for Workspace — 1 operation(s) for
+    google chat api.
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
@@ -108,11 +99,9 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-chat-integrations-for-workspace-google-chat-api-api-openapi.yml
-- aid: >-
-    google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-members-api
+- aid: google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-members-api
   name: Google Chat Integrations for Workspace Members API
-  description: >-
-    The Members API from Google Chat Integrations for Workspace — 1 operation(s) for members.
+  description: The Members API from Google Chat Integrations for Workspace — 1 operation(s) for members.
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
@@ -120,11 +109,9 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-chat-integrations-for-workspace-members-api-openapi.yml
-- aid: >-
-    google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-message-api
+- aid: google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-message-api
   name: Google Chat Integrations for Workspace Message API
-  description: >-
-    The Message API from Google Chat Integrations for Workspace — 1 operation(s) for message.
+  description: The Message API from Google Chat Integrations for Workspace — 1 operation(s) for message.
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
@@ -132,11 +119,9 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-chat-integrations-for-workspace-message-api-openapi.yml
-- aid: >-
-    google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-messages-api
+- aid: google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-messages-api
   name: Google Chat Integrations for Workspace Messages API
-  description: >-
-    The Messages API from Google Chat Integrations for Workspace — 1 operation(s) for messages.
+  description: The Messages API from Google Chat Integrations for Workspace — 1 operation(s) for messages.
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
@@ -146,11 +131,9 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-chat-integrations-for-workspace-messages-api-openapi.yml
-- aid: >-
-    google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-reactions-api
+- aid: google-chat-integrations-for-workspace:google-chat-integrations-for-workspace-reactions-api
   name: Google Chat Integrations for Workspace Reactions API
-  description: >-
-    The Reactions API from Google Chat Integrations for Workspace — 1 operation(s) for reactions.
+  description: The Reactions API from Google Chat Integrations for Workspace — 1 operation(s) for reactions.
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
@@ -169,36 +152,36 @@ apis:
   - type: OpenAPI
     url: openapi/google-chat-integrations-for-workspace-spaces-api-openapi.yml
 common:
-  - type: AgenticAccess
-    url: agentic-access/google-chat-integrations-for-workspace-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/google-chat-integrations-for-workspace-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/google-chat-integrations-for-workspace-domain-security.yml
-  - type: Authentication
-    url: authentication/google-chat-integrations-for-workspace-authentication.yml
-  - type: OAuthScopes
-    url: scopes/google-chat-integrations-for-workspace-scopes.yml
-  - type: GitHubOrganization
-    url: https://github.com/googleworkspace
-  - type: Website
-    url: https://workspace.google.com/products/chat/
-  - type: Documentation
-    url: https://developers.google.com/workspace/chat
-  - type: DeveloperPortal
-    url: https://developers.google.com/workspace
-  - type: Cloud Console
-    url: https://console.cloud.google.com
-  - type: Pricing
-    url: https://workspace.google.com/pricing.html
-  - type: Signup
-    url: https://workspace.google.com/signup
-  - type: Support
-    url: https://support.google.com/chat
-  - url: https://developers.google.com/feeds/chat-release-notes.xml
-    type: Blog
+- type: AgenticAccess
+  url: agentic-access/google-chat-integrations-for-workspace-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/google-chat-integrations-for-workspace-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/google-chat-integrations-for-workspace-domain-security.yml
+- type: Authentication
+  url: authentication/google-chat-integrations-for-workspace-authentication.yml
+- type: OAuthScopes
+  url: scopes/google-chat-integrations-for-workspace-scopes.yml
+- type: GitHubOrganization
+  url: https://github.com/googleworkspace
+- type: Website
+  url: https://workspace.google.com/products/chat/
+- type: Documentation
+  url: https://developers.google.com/workspace/chat
+- type: DeveloperPortal
+  url: https://developers.google.com/workspace
+- type: Cloud Console
+  url: https://console.cloud.google.com
+- type: Pricing
+  url: https://workspace.google.com/pricing.html
+- type: Signup
+  url: https://workspace.google.com/signup
+- type: Support
+  url: https://support.google.com/chat
+- url: https://developers.google.com/feeds/chat-release-notes.xml
+  type: Blog
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-parent: google-workspace
 x-relationship: product
