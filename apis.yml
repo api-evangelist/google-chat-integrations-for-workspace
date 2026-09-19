@@ -38,6 +38,15 @@ tags:
 - Messaging
 - Collaboration
 - Chat Apps
+- Space
+- Slash Commands
+- Bots
+tags_raw:
+- Google Workspace
+- Team Chat
+- Messaging
+- Collaboration
+- Chat Apps
 - Spaces
 - Slash Commands
 - Bots
@@ -57,7 +66,7 @@ apis:
   tags:
   - Google Chat
   - Message
-  - Spaces
+  - Space
   - Members
   - Reactions
   - Chat Apps
@@ -148,6 +157,8 @@ apis:
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
+  - Space
+  tags_raw:
   - Spaces
   properties:
   - type: OpenAPI
