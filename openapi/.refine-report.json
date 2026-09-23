@@ -1,13 +1,7 @@
 {
   "provider": "google-chat-integrations-for-workspace",
   "sources": [
-    "google-chat-integrations-for-workspace-customemojis-api-openapi.yml",
-    "google-chat-integrations-for-workspace-google-chat-api-api-openapi.yml",
-    "google-chat-integrations-for-workspace-members-api-openapi.yml",
-    "google-chat-integrations-for-workspace-message-api-openapi.yml",
-    "google-chat-integrations-for-workspace-messages-api-openapi.yml",
-    "google-chat-integrations-for-workspace-reactions-api-openapi.yml",
-    "google-chat-integrations-for-workspace-spaces-api-openapi.yml"
+    "_original/google-chat-integrations-for-workspace-openapi.yml"
   ],
   "outputs": [
     "google-chat-integrations-for-workspace-customemojis-api-openapi.yml",
@@ -18,18 +12,41 @@
     "google-chat-integrations-for-workspace-reactions-api-openapi.yml",
     "google-chat-integrations-for-workspace-spaces-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
-    "google-chat-integrations-for-workspace-customemojis-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-chat-integrations-for-workspace-google-chat-api-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-chat-integrations-for-workspace-members-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-chat-integrations-for-workspace-message-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-chat-integrations-for-workspace-messages-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-chat-integrations-for-workspace-reactions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-chat-integrations-for-workspace-spaces-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "google-chat-integrations-for-workspace-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths POST /v1/spaces -> Spaces",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths GET /v1/spaces -> Spaces",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths GET /v1/{name} -> Google Chat API",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths POST /v1/{parent}/messages -> Messages",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths GET /v1/{parent}/messages -> Messages",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths DELETE /v1/{name}/message -> Message",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths POST /v1/{parent}/members -> Members",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths GET /v1/{parent}/members -> Members",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths POST /v1/{parent}/reactions -> Reactions",
+    "google-chat-integrations-for-workspace-openapi.yml: tagged paths GET /v1/customEmojis -> CustomEmojis",
+    "google-chat-integrations-for-workspace-openapi.yml: declared missing tag: CustomEmojis",
+    "google-chat-integrations-for-workspace-openapi.yml: declared missing tag: Google Chat API",
+    "google-chat-integrations-for-workspace-openapi.yml: declared missing tag: Members",
+    "google-chat-integrations-for-workspace-openapi.yml: declared missing tag: Message",
+    "google-chat-integrations-for-workspace-openapi.yml: declared missing tag: Messages",
+    "google-chat-integrations-for-workspace-openapi.yml: declared missing tag: Reactions",
+    "google-chat-integrations-for-workspace-openapi.yml: declared missing tag: Spaces",
+    "superseded outputs removed: google-chat-integrations-for-workspace-custom-emojis-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 8 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "google-chat-integrations-for-workspace-custom-emojis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-chat-integrations-for-workspace-google-chat-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-chat-integrations-for-workspace-members-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-chat-integrations-for-workspace-message-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-chat-integrations-for-workspace-messages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-chat-integrations-for-workspace-reactions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-chat-integrations-for-workspace-spaces-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

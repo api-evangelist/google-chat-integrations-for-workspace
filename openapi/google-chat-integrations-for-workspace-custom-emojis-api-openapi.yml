@@ -9,9 +9,7 @@ info:
 
     Authentication uses OAuth 2.0 user credentials or service-account credentials
 
-    for app-bot calls.
-
-    '
+    for app-bot calls.'
   version: v1
 servers:
 - url: https://chat.googleapis.com
@@ -20,7 +18,7 @@ security:
   - chat.spaces
   - chat.messages
 tags:
-- name: CustomEmojis
+- name: Custom Emojis
 paths:
   /v1/customEmojis:
     get:
@@ -43,7 +41,7 @@ paths:
               schema:
                 type: object
       tags:
-      - CustomEmojis
+      - Custom Emojis
 components:
   securitySchemes:
     OAuth2:
