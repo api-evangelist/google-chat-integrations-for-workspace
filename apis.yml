@@ -38,7 +38,7 @@ tags:
 - Messaging
 - Collaboration
 - Chat Apps
-- Space
+- Spaces
 - Slash Commands
 - Bots
 tags_raw:
@@ -66,7 +66,7 @@ apis:
   tags:
   - Google Chat
   - Message
-  - Space
+  - Spaces
   - Members
   - Reactions
   - Chat Apps
@@ -157,7 +157,7 @@ apis:
   humanURL: https://developers.google.com/workspace/chat
   baseURL: https://chat.googleapis.com
   tags:
-  - Space
+  - Spaces
   tags_raw:
   - Spaces
   properties:
@@ -209,3 +209,5 @@ maintainers:
   email: kin@apievangelist.com
 x-parent: google-workspace
 x-relationship: product
+x-tags-removed:
+- Space
