@@ -1,4 +1,4 @@
-# Google Chat Integrations for Workspace (google-chat-integrations-for-workspace)
+# Google Chat Integrations for Workspace
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,68 +66,120 @@
 
 Google Chat is the messaging and collaboration platform built into Google Workspace, allowing teams to chat in direct messages, group conversations, and spaces with threaded discussions, file sharing, tasks, and Chat app integrations. The Google Chat REST API lets developers build Chat apps that send messages, manage spaces and members, post cards, handle slash commands, react to events, and integrate external services into Workspace conversations. Authentication uses OAuth 2.0 (user credentials for user-impersonating calls) or service-account credentials for app-bot calls.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-chat-integrations-for-workspace/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-chat-integrations-for-workspace/refs/heads/main/apis.yml)
+**Areas:** Google Workspace · Team Chat · Messaging · Collaboration · Chat Apps · Spaces · Slash Commands · Bots
 
-## Scope
+## Google Chat Integrations for Workspace on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Chat Integrations for Workspace is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-chat-integrations-for-workspace/](https://apis.io/providers/google-chat-integrations-for-workspace/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Google Workspace
-- Team Chat
-- Messaging
-- Collaboration
-- Chat Apps
-- Spaces
-- Slash Commands
-- Bots
+- [Google Chat API](https://apis.io/apis/google-chat-integrations-for-workspace/chat-api/) — REST API for sending and managing messages, spaces, members, reactions, attachments, custom emoji, user notification settings, and read states in Google…
+- [Google Chat Integrations for Workspace Google Chat API](https://apis.io/apis/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-google-chat-api-api/) — The Google Chat API API from Google Chat Integrations for Workspace — 1 operation(s) for google chat api.
+- [Google Chat Integrations for Workspace Members API](https://apis.io/apis/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-members-api/) — The Members API from Google Chat Integrations for Workspace — 1 operation(s) for members.
+- [Google Chat Integrations for Workspace Message API](https://apis.io/apis/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-message-api/) — The Message API from Google Chat Integrations for Workspace — 1 operation(s) for message.
+- [Google Chat Integrations for Workspace Messages API](https://apis.io/apis/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-messages-api/) — The Messages API from Google Chat Integrations for Workspace — 1 operation(s) for messages.
+- [Google Chat Integrations for Workspace Reactions API](https://apis.io/apis/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-reactions-api/) — The Reactions API from Google Chat Integrations for Workspace — 1 operation(s) for reactions.
+- [Google Chat Integrations for Workspace Spaces API](https://apis.io/apis/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-spaces-api/) — The Spaces API from Google Chat Integrations for Workspace — 1 operation(s) for spaces.
+- [Google Chat Integrations for Workspace Custom Emojis API](https://apis.io/apis/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-custom-emojis-api/) — The Custom Emojis API from Google Chat Integrations for Workspace — 1 operation(s) for custom emojis.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Chat API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for sending and managing messages, spaces, members, reactions, attachments, custom emoji, user notification settings, and read states in Google Chat. Authentication uses OAuth 2.0 user credentials or service-account credentials (for app-bot calls).
+- [Google Chat Integrations For Workspace Agentic Access](https://apis.io/agentic-access/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-agentic-access/)
 
-- **Human URL:** [https://developers.google.com/workspace/chat](https://developers.google.com/workspace/chat)
-- **Base URL:** `https://chat.googleapis.com`
+#### Collections (8)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Google Chat
-- Messages
-- Spaces
-- Members
-- Reactions
-- Chat Apps
+- [Google Chat API](https://apis.io/collections/google-chat-integrations-for-workspace/open-google-chat-integrations-for-workspace/)
+- [Google Chat CustomEmojis API](https://apis.io/collections/google-chat-integrations-for-workspace/open-google-chat-integrations-for-workspace-customemojis-api/)
+- [Google Chat CustomEmojis Google Chat API API](https://apis.io/collections/google-chat-integrations-for-workspace/open-google-chat-integrations-for-workspace-google-chat-api-api/)
+- [Google Chat CustomEmojis Members API](https://apis.io/collections/google-chat-integrations-for-workspace/open-google-chat-integrations-for-workspace-members-api/)
+- [Google Chat CustomEmojis Message API](https://apis.io/collections/google-chat-integrations-for-workspace/open-google-chat-integrations-for-workspace-message-api/)
+- [Google Chat CustomEmojis Messages API](https://apis.io/collections/google-chat-integrations-for-workspace/open-google-chat-integrations-for-workspace-messages-api/)
+- [Google Chat CustomEmojis Reactions API](https://apis.io/collections/google-chat-integrations-for-workspace/open-google-chat-integrations-for-workspace-reactions-api/)
+- [Google Chat CustomEmojis Spaces API](https://apis.io/collections/google-chat-integrations-for-workspace/open-google-chat-integrations-for-workspace-spaces-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://developers.google.com/workspace/chat)
-- [API Reference](https://developers.google.com/workspace/chat/api/reference/rest)
-- [Discovery  Document](https://chat.googleapis.com/$discovery/rest?version=v1)
-- [Authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-- [Build  Chat  Apps](https://developers.google.com/workspace/chat/build)
-- [Postman Collection](collections/google-chat-integrations-for-workspace.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/google-chat-integrations-for-workspace.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Google Chat Integrations For Workspace Authentication](https://apis.io/security/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-authentication/)
+- [Google Chat Integrations For Workspace Domain Security](https://apis.io/security/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-domain-security/)
+- [Google Chat Integrations For Workspace Vulnerability Disclosure](https://apis.io/security/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-vulnerability-disclosure/)
 
-- [GitHub Organization](https://github.com/googleworkspace)
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Chat Integrations For Workspace Scopes](https://apis.io/scopes/google-chat-integrations-for-workspace/google-chat-integrations-for-workspace-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://workspace.google.com/products/chat/)
 - [Documentation](https://developers.google.com/workspace/chat)
-- [Developer  Portal](https://developers.google.com/workspace)
-- [Cloud  Console](https://console.cloud.google.com)
 - [Pricing](https://workspace.google.com/pricing.html)
-- [Sign Up](https://workspace.google.com/signup)
 - [Support](https://support.google.com/chat)
+- [Blog](https://developers.google.com/feeds/chat-release-notes.xml)
+- [GitHub](https://github.com/googleworkspace)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 32.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 44.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 23.7 |
+
+**Agent readiness 27.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-chat-integrations-for-workspace/](https://apis.io/providers/google-chat-integrations-for-workspace/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Chat Integrations for Workspace: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-chat-integrations-for-workspace/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
